@@ -1,0 +1,13 @@
+.container {
+    width: 100dvw;
+    height: 100dvh;
+    background: var(--color-gray-100);
+}
+
+.wrapper {
+    min-width: 320px;
+    max-width: 425px;
+    height: 100dvh;
+    margin: auto;
+    background: var(--color-white);
+}

@@ -2,3 +2,18 @@
   padding: 0;
   margin: 0;
 }
+
+:root {
+  margin: 0;
+  padding: 0;
+
+  --color-white: #FFF;
+  --color-black: #000;
+  --color-hot-pink: #FC5BA8;
+  --color-pink: #F2ACB2;
+  --color-gray-100: #EBEBEB;
+  --color-gray-200: #E1E1E1;
+  --color-gray-300: #E2E2E2;
+  --color-gray-500: #A8A8A8;
+
+}
