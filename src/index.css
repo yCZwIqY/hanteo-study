@@ -17,3 +17,10 @@
   --color-gray-500: #A8A8A8;
 
 }
+
+.swiper-pagination-bullet {
+  background-color: var(--color-gray-500) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--color-hot-pink) !important;
+}

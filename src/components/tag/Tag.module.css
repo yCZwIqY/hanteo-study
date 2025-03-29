@@ -1,0 +1,12 @@
+.container {
+    background-color: var(--color-hot-pink);
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 900;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.inactive {
+    background-color: var(--color-gray-500);
+}
