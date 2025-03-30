@@ -1,26 +1,14 @@
-import { ReactNode } from 'react';
 import { Link } from 'react-router';
 import styles from './BannerSlide.module.css';
 import dayjs from 'dayjs';
-interface BannerSlideProps {
-  imageUrl: string;
-  title: string;
-  startDate: string;
-  endDate: string;
-  stateTag?: ReactNode;
-  linkLabel: string;
-  link: string;
-}
+import isBetween from 'dayjs/plugin/isBetween';
+import Tag from '../tag/Tag.tsx';
+import { BannerSlideItem } from './Banner.tsx';
+dayjs.extend(isBetween);
 
-const BannerSlide = ({
-  imageUrl,
-  title,
-  startDate,
-  endDate,
-  stateTag,
-  linkLabel,
-  link,
-}: BannerSlideProps) => {
+const BannerSlide = ({ imageUrl, title, startDate, endDate, linkLabel, link }: BannerSlideItem) => {
+  const isProgress = dayjs().isBetween(startDate, endDate, 'day', '[]');
+
   const getDateRange = () =>
     `${dayjs(startDate).format('YYYY-MM-DD')}~${dayjs(endDate).format('YYYY-MM-DD')}`;
   return (
@@ -35,7 +23,11 @@ const BannerSlide = ({
         </div>
         <div className={styles.date}>{getDateRange()}</div>
       </div>
-      <div className={styles.tag}>{stateTag}</div>
+      {isProgress && (
+        <div className={styles.tag}>
+          <Tag>진행 중</Tag>
+        </div>
+      )}
     </div>
   );
 };
