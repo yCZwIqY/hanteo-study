@@ -10,4 +10,6 @@
     height: 100dvh;
     margin: auto;
     background: var(--color-white);
+    display: flex;
+    flex-direction: column;
 }

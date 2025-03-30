@@ -31,7 +31,15 @@ const SwipeLayout = ({
   };
 
   return (
-    <Swiper initialSlide={initialSlide} slidesPerView={1} onTransitionEnd={onChangeSlide}>
+    <Swiper
+      initialSlide={initialSlide}
+      style={{
+        flex: 1,
+        width: '100%',
+      }}
+      slidesPerView={1}
+      onTransitionEnd={onChangeSlide}
+    >
       {prevPath && <SwiperSlide>{prevElement}</SwiperSlide>}
       <SwiperSlide>{children}</SwiperSlide>
       {nextPath && <SwiperSlide>{nextElement}</SwiperSlide>}
