@@ -47,7 +47,7 @@ const Header = () => {
       <div className={styles.wrapper}>
         {menus.map(({ id, path, label }: MenuType) => (
           <div className={styles.item} key={id}>
-            <Link to={path} className={location.pathname === path && styles.selected}>
+            <Link to={path} className={location.pathname === path ? styles.selected : ''}>
               {label}
             </Link>
           </div>

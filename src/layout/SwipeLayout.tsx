@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from 'react-router';
+import type { Swiper as SwiperClass } from 'swiper/types';
 
 interface SwipeLayoutProps {
   children: ReactNode;
@@ -19,7 +20,7 @@ const SwipeLayout = ({
 }: SwipeLayoutProps) => {
   const navigate = useNavigate();
   const initialSlide = prevPath ? 1 : 0;
-  const onChangeSlide = swipe => {
+  const onChangeSlide = (swipe: SwiperClass) => {
     const { activeIndex } = swipe;
     if (activeIndex === initialSlide) return;
 
