@@ -6,9 +6,7 @@ import 'swiper/css/pagination';
 
 import { worker } from './mock/worker.ts';
 
-if (import.meta.env.MODE === 'development') {
-  worker.start();
-}
+worker.start();
 
 function App() {
   return <RouterProvider router={router} />;
